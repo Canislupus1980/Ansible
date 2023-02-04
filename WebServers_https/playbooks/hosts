@@ -1,0 +1,13 @@
+[linux_servers]
+linux1 ansible_connection=ssh ansible_python_interpreter=/usr/bin/python3 ansible_ssh_host=192.168.30.123 ansible_ssh_port=2222 ansible_ssh_user=cloud-user ansible_ssh_private_key_file=/home/canislupus/.ssh/office ansible_became_user=root
+linux2 ansible_connection=ssh ansible_python_interpreter=/usr/bin/python3 ansible_ssh_host=192.168.30.124 ansible_ssh_port=2223 ansible_ssh_user=cloud-user ansible_ssh_private_key_file=/home/canislupus/.ssh/office ansible_became_user=root ansible_sudo_pass=*
+
+; [windows_servers]
+; winser ansible_host=192.168.32.38
+
+; [windows_servers:vars]
+; ansible_user=myadmin
+; ansible_password=qwerty
+; ansible_port=5986
+; ansible_connection=winrm
+; ansible_winrm_server_cert_validation=ignore
