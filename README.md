@@ -18,3 +18,5 @@ cd playbooks/files
 openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -subj /CN=localhost -keyout nginx.key -out nginx.crt
 
 ansible-playbook web_tls.yml
+
+ansible linux_servers -m setup -a 'filter=ansible_eth*'
